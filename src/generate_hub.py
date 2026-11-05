@@ -2,26 +2,61 @@
 import json
 import os
 
-base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+base_dir = r"C:\Users\Ильясис Бутенкасис\Desktop\vibe-sites"
 data_path = os.path.join(base_dir, "data", "businesses.json")
 out_file = os.path.join(base_dir, "dist", "index.html")
 
 with open(data_path, "r", encoding="utf-8") as f:
     businesses = json.load(f)
 
-# Styles for cards
 card_styles = {
-    "uspeh-777": {"color": "#f97316", "bg": "rgba(234, 88, 12, 0.12)", "border": "rgba(249, 115, 22, 0.35)", "tag": "Кузовной цех и ТО"},
-    "zvezda": {"color": "#f59e0b", "bg": "rgba(217, 119, 6, 0.12)", "border": "rgba(245, 158, 11, 0.35)", "tag": "Иномарки и Тёплый бокс"},
-    "careta": {"color": "#38bdf8", "bg": "rgba(37, 99, 235, 0.12)", "border": "rgba(56, 189, 248, 0.35)", "tag": "Мультибренд 5.0"},
-    "avtoray": {"color": "#34d399", "bg": "rgba(5, 150, 105, 0.12)", "border": "rgba(52, 211, 153, 0.35)", "tag": "Подвеска и ТО"},
-    "avtolux": {"color": "#818cf8", "bg": "rgba(79, 70, 229, 0.12)", "border": "rgba(129, 140, 248, 0.35)", "tag": "Автостекла и Кузов"}
+    "uspeh-777": {
+        "color": "#f97316",
+        "bg": "rgba(234, 88, 12, 0.12)",
+        "border": "rgba(249, 115, 22, 0.35)",
+        "tag": "Кузовной цех и ТО",
+        "rating_label": "★ 4.8 (2ГИС) • 4.4 (Яндекс)"
+    },
+    "zvezda": {
+        "color": "#f59e0b",
+        "bg": "rgba(217, 119, 6, 0.12)",
+        "border": "rgba(245, 158, 11, 0.35)",
+        "tag": "Иномарки и Тёплый бокс",
+        "rating_label": "★ 4.9 (2ГИС) • 4.6 (Яндекс)"
+    },
+    "careta": {
+        "color": "#38bdf8",
+        "bg": "rgba(37, 99, 235, 0.12)",
+        "border": "rgba(56, 189, 248, 0.35)",
+        "tag": "Мультибренд 5.0",
+        "rating_label": "★ 5.0 (2ГИС) • 4.5 (Яндекс)"
+    },
+    "avtoray": {
+        "color": "#34d399",
+        "bg": "rgba(5, 150, 105, 0.12)",
+        "border": "rgba(52, 211, 153, 0.35)",
+        "tag": "Открытая ремзона и ТО",
+        "rating_label": "★ 5.0 (32 отз. Яндекс)"
+    },
+    "avtolux": {
+        "color": "#818cf8",
+        "bg": "rgba(79, 70, 229, 0.12)",
+        "border": "rgba(129, 140, 248, 0.35)",
+        "tag": "Центр автостекол",
+        "rating_label": "★ 4.8 (2ГИС) • 4.3 (Яндекс)"
+    }
 }
 
 cards_html = ""
 for b in businesses:
     slug = b["slug"]
-    st = card_styles.get(slug, {"color": "#38bdf8", "bg": "rgba(255,255,255,0.05)", "border": "rgba(255,255,255,0.15)", "tag": "СТО"})
+    st = card_styles.get(slug, {
+        "color": "#38bdf8",
+        "bg": "rgba(255,255,255,0.05)",
+        "border": "rgba(255,255,255,0.15)",
+        "tag": "СТО",
+        "rating_label": "★ 4.8"
+    })
     phone = b["phones"][0]
     phone_clean = b["phone_clean"]
     
@@ -29,7 +64,7 @@ for b in businesses:
     <div class="biz-card" style="border-top: 3px solid {st['color']};">
       <div class="biz-top">
         <span class="biz-tag" style="color: {st['color']}; background: {st['bg']}; border: 1px solid {st['border']};">{st['tag']}</span>
-        <span class="biz-rating">★ {b['rating']} <span style="color: #94a3b8; font-size: 11px;">({b['reviews_count']} отз.)</span></span>
+        <span class="biz-rating">{st['rating_label']}</span>
       </div>
       <h2 class="biz-name">{b['name']}</h2>
       <p class="biz-address">📍 {b['address']}</p>
@@ -137,7 +172,7 @@ hub_html = f"""<!DOCTYPE html>
     .biz-rating {{
       color: #fbbf24;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 13px;
     }}
     .biz-name {{
       font-family: 'Unbounded', sans-serif;
@@ -199,7 +234,7 @@ hub_html = f"""<!DOCTYPE html>
     <div class="header">
       <div class="badge">⚡ Эксперимент Vibe-Coding 2026</div>
       <h1>ВИТРИНА МОБИЛЬНЫХ САЙТОВ СТО</h1>
-      <p class="subtitle">г. Воронеж. Автономные посадочные страницы для автосервисов без сайта с рейтингом 4.8–5.0 по методике ролика kayy.</p>
+      <p class="subtitle">г. Воронеж. Автономные посадочные страницы для автосервисов без сайта с рейтингом 4.6–5.0 по методике ролика kayy.</p>
     </div>
 
     <div class="grid">
@@ -207,8 +242,7 @@ hub_html = f"""<!DOCTYPE html>
     </div>
 
     <div class="footer-note">
-      <p>5 сайтов сгенерированы с уникальным дизайном, персональными авто-палитрами и живыми часами работы.</p>
-      <p style="margin-top: 4px;">Сверено с карточками 2ГИС и Яндекс Карт: Ноябрь 2026 г.</p>
+      Демо-концепты созданы исключительно для демонстрации возможностей мобильного сайта владельцам бизнесов. Не оферта.
     </div>
   </div>
 </body>
@@ -218,4 +252,4 @@ hub_html = f"""<!DOCTYPE html>
 with open(out_file, "w", encoding="utf-8") as f:
     f.write(hub_html)
 
-print("SUCCESS: dist/index.html hub catalog created!")
+print("SUCCESS: dist/index.html hub regenerated!")
