@@ -2,7 +2,7 @@
 import json
 import os
 
-base_dir = r"C:\Users\Ильясис Бутенкасис\Desktop\vibe-sites"
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_path = os.path.join(base_dir, "data", "businesses.json")
 out_file = os.path.join(base_dir, "dist", "index.html")
 
@@ -253,3 +253,7 @@ with open(out_file, "w", encoding="utf-8") as f:
     f.write(hub_html)
 
 print("SUCCESS: dist/index.html hub regenerated!")
+
+for target in [os.path.join(base_dir, "docs", "index.html"), os.path.join(base_dir, "index.html")]:
+    with open(target, "w", encoding="utf-8") as f:
+        f.write(hub_html)

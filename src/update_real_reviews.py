@@ -2,7 +2,7 @@
 import json
 import os
 
-base_dir = r"C:\Users\Ильясис Бутенкасис\Desktop\vibe-sites"
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 data_path = os.path.join(base_dir, "data", "businesses.json")
 
 with open(data_path, "r", encoding="utf-8") as f:

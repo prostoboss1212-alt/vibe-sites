@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Автосервис «Звезда» — Воронеж, г. Воронеж, ул. Димитрова, 91А | Ремонт иномарок на Димитрова</title>
-  <meta name="description" content="Автосервис «Звезда» в Воронеже (г. Воронеж, ул. Димитрова, 91А). Рейтинг 4.6 на Яндекс Картах (45 отзывов) и 4.9 в 2ГИС. Ремонт иномарок, ТО, диагностика и сварочные работы в Левобережном районе.">
+  <title>Автосервис «Звезда» — г. Воронеж, ул. Димитрова, 91А | Ремонт иномарок в Воронеже</title>
+  <meta name="description" content="Автосервис «Звезда» в Воронеже (г. Воронеж, ул. Димитрова, 91А, Левобережный район). Рейтинг 4,9 в 2ГИС (24 отзыва) и 4,6 на Яндекс Картах (45 отзывов). Качественный ремонт иномарок, диагностика и сварочные работы на Димитрова.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
@@ -66,7 +66,7 @@
       position: sticky;
       top: 0;
       z-index: 90;
-      background: rgba(12, 13, 16, 0.88);
+      background: rgba(12, 13, 16, 0.90);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
@@ -138,28 +138,19 @@
       }
     }
 
-    /* Hero-секция */
+    /* Hero-секция с атмосферным фото ремзоны (без номеров и личных данных) */
     .hero {
       position: relative;
-      padding: 60px 0 48px;
-      background: 
-        radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.20) 0%, rgba(217, 119, 6, 0.04) 40%, transparent 70%),
-        linear-gradient(180deg, #151410 0%, var(--bg-main) 100%);
+      padding: 64px 0 52px;
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.24) 0%, transparent 65%),
+        linear-gradient(90deg, rgba(12, 13, 16, 0.96) 0%, rgba(12, 13, 16, 0.88) 55%, rgba(12, 13, 16, 0.72) 100%),
+        linear-gradient(180deg, rgba(12, 13, 16, 0.3) 0%, var(--bg-main) 100%),
+        url('https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
       border-bottom: 1px solid var(--border);
       overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 36px 36px;
-      pointer-events: none;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
     }
 
     .hero-content {
@@ -194,15 +185,17 @@
     }
 
     .pill-secondary {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.1);
       border: 1px solid var(--border-strong);
       color: var(--text-main);
+      backdrop-filter: blur(6px);
     }
 
     .pill-award {
-      background: rgba(245, 158, 11, 0.14);
-      border: 1px solid rgba(245, 158, 11, 0.35);
+      background: rgba(245, 158, 11, 0.16);
+      border: 1px solid rgba(245, 158, 11, 0.4);
       color: #fbbf24;
+      backdrop-filter: blur(6px);
     }
 
     .hero-title {
@@ -218,7 +211,7 @@
 
     .hero-sub {
       font-size: clamp(16px, 2vw, 18px);
-      color: #d1d5db;
+      color: #e5e7eb;
       max-width: 660px;
       margin-bottom: 28px;
       font-weight: 400;
@@ -255,19 +248,19 @@
     }
 
     .btn-primary:hover {
-      background: #fb923c;
+      filter: brightness(1.08);
       transform: translateY(-2px);
     }
 
     .btn-outline {
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.08);
       color: var(--text-main);
       border-color: var(--border-strong);
       backdrop-filter: blur(8px);
     }
 
     .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.14);
       transform: translateY(-2px);
     }
 
@@ -284,7 +277,7 @@
 
     .hero-contact-meta {
       padding-top: 18px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--border-strong);
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -324,7 +317,7 @@
 
     .hero-address-line {
       font-size: 14px;
-      color: var(--text-muted);
+      color: #d1d5db;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -419,34 +412,18 @@
       overflow: hidden;
       border: 1px solid var(--border-strong);
       background: #14161b;
-      min-height: 200px;
+      min-height: 210px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding: 22px;
     }
 
-    .showcase-bg-1 {
-      background: 
-        linear-gradient(180deg, rgba(12, 13, 16, 0.2) 0%, rgba(12, 13, 16, 0.92) 100%),
-        radial-gradient(circle at 75% 30%, rgba(234, 88, 12, 0.28), transparent 60%),
-        repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 12px),
-        #181920;
-    }
-
-    .showcase-bg-2 {
-      background: 
-        linear-gradient(180deg, rgba(12, 13, 16, 0.2) 0%, rgba(12, 13, 16, 0.92) 100%),
-        radial-gradient(circle at 25% 30%, rgba(56, 189, 248, 0.2), transparent 60%),
-        repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 2px, transparent 2px, transparent 12px),
-        #151821;
-    }
-
     .showcase-badge {
       position: absolute;
       top: 16px;
       left: 16px;
-      background: rgba(12, 13, 16, 0.78);
+      background: rgba(12, 13, 16, 0.84);
       backdrop-filter: blur(6px);
       border: 1px solid var(--border-strong);
       color: var(--text-main);
@@ -470,9 +447,66 @@
 
     .showcase-desc {
       font-size: 13px;
-      color: var(--text-muted);
+      color: #d1d5db;
       position: relative;
       z-index: 2;
+    }
+
+    /* Фотогалерея оснащения (без номеров авто и лиц) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 680px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      min-height: 210px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px;
+    }
+
+    .gallery-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(12, 13, 16, 0.84);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border-strong);
+      color: var(--accent-light);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .gallery-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .gallery-desc {
+      font-size: 13px;
+      color: #d1d5db;
     }
 
     /* Секции */
@@ -541,7 +575,7 @@
     }
 
     .service-card:hover {
-      border-color: rgba(245, 158, 11, 0.35);
+      border-color: rgba(245, 158, 11, 0.4);
       background: var(--bg-card-hover);
       transform: translateY(-2px);
     }
@@ -582,12 +616,6 @@
       align-items: center;
     }
 
-    .service-price-muted {
-      color: #d1d5db;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
     .services-note {
       margin-top: 20px;
       font-size: 13px;
@@ -600,7 +628,7 @@
       font-weight: 600;
     }
 
-    /* ЗА ЧТО ЦЕНЯТ КЛИЕНТЫ (01, 02, 03) */
+    /* ЗА ЧТО ЦЕНЯТ КЛИЕНТЫ */
     .values-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -642,7 +670,7 @@
       line-height: 1.5;
     }
 
-    /* ОТЗЫВЫ И РЕЙТИНГИ 2ГИС + ЯНДЕКС */
+    /* ОТЗЫВЫ И ЖИВОЙ ВИДЖЕТ ЯНДЕКС КАРТ */
     .reviews-layout {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -763,6 +791,40 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .live-reviews-details {
+      margin-top: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .live-reviews-summary {
+      padding: 16px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      user-select: none;
+    }
+
+    .live-reviews-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .live-reviews-summary:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .live-reviews-widget-wrap {
+      padding: 0 20px 20px;
+      border-top: 1px solid var(--border);
     }
 
     .reviews-footnote {
@@ -912,7 +974,7 @@
       display: block;
     }
 
-    /* Оранжевый CTA-баннер */
+    /* CTA-баннер */
     .cta-banner {
       background: linear-gradient(135deg, #b45309 0%, #78350f 100%);
       padding: 56px 0;
@@ -1068,7 +1130,7 @@
       <div class="nav-links">
         <a href="#services">Услуги и прайс</a>
         <a href="#why">О сервисе</a>
-        <a href="#reviews">Отзывы (720+)</a>
+        <a href="#reviews">Отзывы (69)</a>
         <a href="#contacts">Контакты</a>
         <a href="tel:+79092146434" class="nav-cta">+7 (909) 214-64-34</a>
       </div>
@@ -1080,15 +1142,15 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-pills">
-          <span class="pill pill-primary">Автотехцентр</span>
+          <span class="pill pill-primary">Ремонт иномарок</span>
           <span class="pill pill-secondary">Левобережный район</span>
-          <span class="pill pill-award">★ Номинант премии 2ГИС 2026</span>
+          <span class="pill pill-award">🏆 Знак «Хорошее место» Яндекса</span>
         </div>
 
-        <h1 class="hero-title">АВТОСЕРВИС<br>«ЗВЕЗДА»</h1>
+        <h1 class="hero-title">СТО «ЗВЕЗДА»<br>НА ДИМИТРОВА</h1>
 
         <p class="hero-sub">
-          Специализированный ремонт иномарок, профессиональное обслуживание ходовой и ТО. Честная диагностика и аренда тёплого бокса для тех, кто любит чинить авто сам.
+          Специализированный ремонт иномарок, профессиональное обслуживание ходовой, сварочные работы и ТО на ул. Димитрова, 91А. Честная диагностика и аренда тёплого бокса с подъёмником.
         </p>
 
         <div class="hero-actions">
@@ -1107,18 +1169,16 @@
             <a href="tel:+79092146434" class="hero-phone-big">+7 (909) 214-64-34</a>
           </div>
           <div class="hero-address-line">
-            <span>г. Воронеж, ул. Серова, 22 (ориентир — пер. Усманский, 170 м)</span>
+            <span>г. Воронеж, ул. Димитрова, 91А (Левобережный район)</span>
             <span>•</span>
-            <span id="work-status" class="status-open"><span class="status-dot"></span> Открыто • 09:00 — 19:00</span>
+            <span id="work-status" class="status-open"><span class="status-dot"></span> Открыто • Пн–Сб 09:00 — 19:00</span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- БЛОК ВИТРИНЫ ЦЕХОВ -->
-  
-  <!-- ПЛАШКА БЫСТРЫХ ПРЕИМУЩЕСТВ СТО «ЗВЕЗДА» -->
+  <!-- БЛОК СПЕЦИАЛИЗАЦИИ -->
   <section class="showcase-section">
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;">
@@ -1141,115 +1201,121 @@
     </div>
   </section>
 
-
-  <!-- УСЛУГИ И ЦЕНЫ (ПРОВЕРЕНО ПО 2ГИС И ОФИЦИАЛЬНОМУ ПРАЙСУ СЕРВИСА) -->
+  <!-- УСЛУГИ И ЦЕНЫ -->
   <section id="services" class="section">
     <div class="container">
       <div class="section-eyebrow">Услуги и цены</div>
       <h2 class="section-heading">Работы и прайс-лист</h2>
 
-      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-        <div class="service-card" style="border-left: 3px solid rgba(217, 119, 6, 0.4);">
+      <div class="services-grid">
+        <div class="service-card" style="border-left: 3px solid #d97706;">
           <div>
             <div class="service-tag">Слесарный ремонт и ТО</div>
             <div class="service-name">Замена масла и фильтров</div>
-            <div class="service-desc">Плановое техобслуживание, замена моторного и трансмиссионного масла, фильтров, свечей</div>
+            <div class="service-desc">Плановое техобслуживание, замена моторного и трансмиссионного масла, фильтров, свечей зажигания</div>
           </div>
           <div class="service-price">
-            <span>от 600 ₽</span>
+            <span style="color: #fbbf24;">от 600 ₽</span>
           </div>
         </div>
-        <div class="service-card" style="border-left: 3px solid rgba(217, 119, 6, 0.4);">
+        <div class="service-card" style="border-left: 3px solid #d97706;">
           <div>
             <div class="service-tag">Подвеска и рулевое</div>
             <div class="service-name">Диагностика и ремонт ходовой</div>
-            <div class="service-desc">Проверка подвески на подъёмнике, замена амортизаторов, сайлентблоков, шаровых опор, рычагов</div>
+            <div class="service-desc">Проверка подвески на подъёмнике, замена амортизаторов, подшипников, сайлентблоков, шаровых опор и рычагов</div>
           </div>
           <div class="service-price">
-            <span>от 800 ₽</span>
+            <span style="color: #fbbf24;">от 800 ₽</span>
           </div>
         </div>
-        <div class="service-card" style="border-left: 3px solid rgba(217, 119, 6, 0.4);">
+        <div class="service-card" style="border-left: 3px solid #d97706;">
           <div>
             <div class="service-tag">Тормозная система</div>
             <div class="service-name">Обслуживание тормозов</div>
-            <div class="service-desc">Замена колодок, тормозных дисков, ремонт суппортов, прокачка тормозной жидкости</div>
+            <div class="service-desc">Замена тормозных колодок в круг, тормозных дисков, ремонт суппортов, прокачка тормозной жидкости</div>
           </div>
           <div class="service-price">
-            <span>от 800 ₽</span>
+            <span style="color: #fbbf24;">от 800 ₽</span>
           </div>
         </div>
-        <div class="service-card" style="border-left: 3px solid rgba(217, 119, 6, 0.4);">
+        <div class="service-card" style="border-left: 3px solid #d97706;">
           <div>
-            <div class="service-tag">Двигатель и навесное</div>
-            <div class="service-name">Ремонт ДВС и замена ГРМ</div>
-            <div class="service-desc">Диагностика двигателя, замена ремней и цепей ГРМ, навесного оборудования и прокладок</div>
+            <div class="service-tag">Двигатель и охлаждение</div>
+            <div class="service-name">Ремонт ДВС, замена ГРМ и охлаждения</div>
+            <div class="service-desc">Диагностика и ремонт двигателя, системы охлаждения, замена ремней и цепей ГРМ, очистка номера ДВС</div>
           </div>
           <div class="service-price">
-            <span>от 2 500 ₽</span>
+            <span style="color: #fbbf24;">от 2 500 ₽</span>
           </div>
         </div>
-        <div class="service-card" style="border-left: 3px solid rgba(217, 119, 6, 0.4);">
+        <div class="service-card" style="border-left: 3px solid #d97706;">
           <div>
-            <div class="service-tag">Компьютерная диагностика</div>
-            <div class="service-name">Диагностика электронных систем</div>
-            <div class="service-desc">Чтение и сброс кодов ошибок, проверка параметров датчиков, диагностика перед покупкой</div>
+            <div class="service-tag">Сварочный цех</div>
+            <div class="service-name">Ремонт глушителей и сварочные работы</div>
+            <div class="service-desc">Приварка банок глушителя, замена гофры, вварка труб и ремонт выхлопной системы любой сложности</div>
           </div>
           <div class="service-price">
-            <span>от 800 ₽</span>
+            <span style="color: #fbbf24;">от 1 000 ₽</span>
           </div>
         </div>
-        <div class="service-card" style="border-left: 3px solid rgba(217, 119, 6, 0.4);">
+        <div class="service-card" style="border-left: 3px solid #d97706;">
           <div>
             <div class="service-tag">Услуга «Сам себе мастер»</div>
             <div class="service-name">Аренда тёплого бокса с подъёмником</div>
-            <div class="service-desc">Почасовая аренда рабочего места с профессиональным подъёмником и базовым инструментом</div>
+            <div class="service-desc">Почасовая аренда рабочего места с профессиональным подъёмником и базовым инструментом для самостоятельного ремонта</div>
           </div>
           <div class="service-price">
-            <span>от 400 ₽/час</span>
+            <span style="color: #fbbf24;">от 400 ₽/час</span>
           </div>
         </div>
       </div>
 
-      <p class="services-note">Точная смета формируется после бесплатного визуального осмотра. Запись по телефону: <a href="tel:+79092146434">+7 (909) 214-64-34</a>.</p>
+      <p class="services-note">
+        Точная стоимость работ и запчастей согласуется после осмотра автомобиля. Запись и консультация по телефону: <a href="tel:+79092146434">+7 (909) 214-64-34</a>.
+      </p>
     </div>
   </section>
 
-  <!-- ЗА ЧТО ЦЕНЯТ КЛИЕНТЫ (01, 02, 03) -->
+  <!-- ЗА ЧТО ЦЕНЯТ КЛИЕНТЫ + ИЛЛЮСТРАЦИИ ОСНАЩЕНИЯ -->
   <section id="why" class="section">
     <div class="container">
       <div class="section-eyebrow">Факты о сервисе</div>
       <h2 class="section-heading">За что клиенты выбирают «Звезда»</h2>
 
-            <div class="values-grid">
+      <div class="values-grid">
         <div class="value-card">
           <div class="value-num">01</div>
           <div class="value-title">Выручают в сложных ситуациях</div>
-          <div class="value-text">
-            По отзывам водителей, мастера выручают при экстренных поломках в пути и перед постановкой на учёт в ГАИ, когда другие сервисы отказывают.
-          </div>
+          <div class="value-text">По отзывам водителей, мастера выручают при экстренных поломках в дороге и перед сверкой номеров ДВС в ГАИ, когда другие сервисы отказывают.</div>
         </div>
-
         <div class="value-card">
           <div class="value-num">02</div>
           <div class="value-title">Специализация на иномарках</div>
-          <div class="value-text">
-            Знаем регламенты обслуживания европейских, корейских и японских авто. Подбор запчастей и масел под строгие спецификации производителей.
-          </div>
+          <div class="value-text">Знаем регламенты обслуживания европейских, корейских и японских авто. Оперативный заказ запчастей и масел под допуски производителей.</div>
         </div>
-
         <div class="value-card">
           <div class="value-num">03</div>
-          <div class="value-title">Сварочные работы и глушители</div>
-          <div class="value-text">
-            Собственный сварочный участок: оперативный ремонт выхлопных систем, замена банок глушителя и слесарные работы любой сложности.
-          </div>
+          <div class="value-title">Сварочные работы и тёплый бокс</div>
+          <div class="value-text">Оперативный ремонт выхлопных систем и глушителей, а также почасовая аренда тёплого бокса с подъёмником для самостоятельного ремонта.</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card" style="background-image: linear-gradient(180deg, rgba(12, 13, 16, 0.15) 0%, rgba(12, 13, 16, 0.92) 100%), url('https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?auto=format&fit=crop&w=800&q=80');">
+          <span class="gallery-tag">Слесарный участок</span>
+          <div class="gallery-title">Ремонт иномарок и ходовой части</div>
+          <div class="gallery-desc">Обслуживание европейских, корейских и японских автомобилей с быстрым подбором запчастей</div>
+        </div>
+        <div class="gallery-card" style="background-image: linear-gradient(180deg, rgba(12, 13, 16, 0.15) 0%, rgba(12, 13, 16, 0.92) 100%), url('https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=800&q=80');">
+          <span class="gallery-tag">Сварка и аренда бокса</span>
+          <div class="gallery-title">Ремонт выхлопных систем и самообслуживание</div>
+          <div class="gallery-desc">Сварочные работы по глушителям и почасовая аренда тёплого бокса с подъёмником</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ОТЗЫВЫ КЛИЕНТОВ (РЕАЛЬНАЯ СТАТИСТИКА 2ГИС И ЯНДЕКС КАРТ) -->
+  <!-- ОТЗЫВЫ КЛИЕНТОВ + ЖИВАЯ ЛЕНТА ЯНДЕКС КАРТ -->
   <section id="reviews" class="section">
     <div class="container">
       <div class="section-eyebrow">Репутация на картах</div>
@@ -1257,7 +1323,7 @@
 
       <div class="reviews-layout">
         <!-- Левая колонка: реальные рейтинги 2ГИС и Яндекс Карт -->
-                <div class="ratings-sidebar">
+        <div class="ratings-sidebar">
           <div class="rating-summary-card">
             <div class="rating-platform-badge">Рейтинг в 2ГИС</div>
             <div class="rating-big-number">4,9</div>
@@ -1266,7 +1332,7 @@
               24 отзыва в 2ГИС →
             </a>
             <div class="rating-award-pill">
-              ⭐ Высокая оценка клиентов 4.9
+              🏆 Знак «Хорошее место» Яндекса
             </div>
           </div>
 
@@ -1275,11 +1341,8 @@
             <div class="rating-big-number">4,6</div>
             <div class="rating-stars">★★★★★</div>
             <a href="https://yandex.ru/maps/org/zvezda/123827273070/reviews/" target="_blank" rel="noopener" class="rating-count-link">
-              45 проверенных отзывов →
+              45 отзывов →
             </a>
-            <div class="rating-award-pill" style="margin-top: 8px;">
-              🏆 Знак «Хорошее место»
-            </div>
           </div>
 
           <div class="sync-badge">
@@ -1291,10 +1354,8 @@
         <div class="reviews-cards-grid">
           <div class="review-quote-card">
             <div>
-              <div class="quote-mark" style="color: var(--accent-light);">“</div>
-              <p class="review-body">
-                Это единственный сервис где мне не отказали! ГАИшники завернули на сверке с номером двигателя. Ребята отмыли, почистили, законсервировали на будущее, попутно сделали диагностику подвески. Пока получал номера — уже привезли запчасти и все поставили за 1.5 часа!
-              </p>
+              <div class="quote-mark" style="color: #f59e0b;">“</div>
+              <p class="review-body">Это единственный сервис где мне не отказали! ГАИшники завернули на сверке с номером двигателя. Ребята отмыли, почистили, законсервировали на будущее, попутно сделали диагностику подвески. Пока получал номера — уже привезли запчасти и все поставили за 1.5 часа!</p>
             </div>
             <div class="review-meta">
               <span>Реальный отзыв из Яндекс Карт</span>
@@ -1303,10 +1364,8 @@
           </div>
           <div class="review-quote-card">
             <div>
-              <div class="quote-mark" style="color: var(--accent-light);">“</div>
-              <p class="review-body">
-                Ехали на юг в отпуск, система охлаждения дала сбой на выезде из города. Заезжал во все сервисы — везде говорили «заняты». Ребята из «ЗВЕЗДЫ» сразу собрали консилиум у капота, оперативно нашли причину и спасли поездку!
-              </p>
+              <div class="quote-mark" style="color: #f59e0b;">“</div>
+              <p class="review-body">Спасибо этим ребятам, Серёжа, тебе особенно! Рядом стоящие сервисы разводили руками, говорили, что всем пора домой. Сергей пришёл на помощь, дотолкал машину до сервиса, поставил на ночь, а утром разобрались и быстро помогли найти запчасти. Чётко и оперативно сработали!</p>
             </div>
             <div class="review-meta">
               <span>Реальный отзыв из Яндекс Карт</span>
@@ -1315,10 +1374,8 @@
           </div>
           <div class="review-quote-card">
             <div>
-              <div class="quote-mark" style="color: var(--accent-light);">“</div>
-              <p class="review-body">
-                Отличный сервис, обслуживаю здесь свой автомобиль с момента покупки. Есть запчасти под заказ и по наличию. Находят подход ко всем клиентам. Рекомендую 👍
-              </p>
+              <div class="quote-mark" style="color: #f59e0b;">“</div>
+              <p class="review-body">Ехали из СПб, под Тулой отвалилась задняя банка глушителя. С утра в воскресенье банку приварили обратно в этом сервисе, приварили быстро и аккуратно, дополнительно вварив кусок трубы. Взяли 1300 ₽. Как по мне — всё супер!</p>
             </div>
             <div class="review-meta">
               <span>Реальный отзыв из Яндекс Карт</span>
@@ -1328,8 +1385,21 @@
         </div>
       </div>
 
-            <p class="reviews-footnote">
-        Все оригиналы отзывов доступны в официальных карточках: <a href="https://yandex.ru/maps/org/zvezda/123827273070/reviews/" target="_blank" rel="noopener">Яндекс Карты (Рейтинг 4.6 • 45 отзывов)</a> и <a href="https://2gis.ru/voronezh/search/Воронеж, улица Димитрова, 91А" target="_blank" rel="noopener">2ГИС (24 отзыва)</a>.
+      <!-- Автообновляемый официальный виджет отзывов Яндекс Карт -->
+      <details class="live-reviews-details">
+        <summary class="live-reviews-summary">
+          <span>🔄 Открыть живую ленту отзывов Яндекс Карт (обновляется автоматически)</span>
+          <span style="color: var(--accent-light); font-size: 13px;">Показать ▼</span>
+        </summary>
+        <div class="live-reviews-widget-wrap">
+          <div style="max-width: 760px; height: 520px; overflow: hidden; position: relative; margin: 16px auto 0; border-radius: 10px; border: 1px solid var(--border-strong);">
+            <iframe style="width: 100%; height: 100%; border: none; border-radius: 10px; box-sizing: border-box;" src="https://yandex.ru/maps-reviews-widget/123827273070?comments" loading="lazy" title="Живые отзывы Яндекс Карт — Автосервис «Звезда»"></iframe>
+          </div>
+        </div>
+      </details>
+
+      <p class="reviews-footnote">
+        Все оригиналы отзывов доступны в официальных карточках: <a href="https://yandex.ru/maps/org/zvezda/123827273070/reviews/" target="_blank" rel="noopener">Яндекс Карты (4,6 • 45 отзывов)</a> и <a href="https://2gis.ru/voronezh/search/Воронеж, улица Димитрова, 91А" target="_blank" rel="noopener">2ГИС (4,9 • 24 отзыва)</a>.
       </p>
     </div>
   </section>
@@ -1341,10 +1411,10 @@
       <h2 class="section-heading">Координаты и телефоны</h2>
 
       <div class="location-layout">
-                <div class="location-info">
+        <div class="location-info">
           <div>
             <div class="location-address-title">ул. Димитрова, 91А</div>
-            <div class="location-district">г. Воронеж, Левобережный район</div>
+            <div class="location-district">г. Воронеж, Левобережный район • Координаты: 51.669646, 39.271244</div>
 
             <div class="contact-block">
               <div class="contact-label">Телефон сервиса</div>
@@ -1353,7 +1423,7 @@
 
             <div class="contact-block">
               <div class="contact-label">График работы</div>
-              <div class="contact-hours">Пн-Сб с 09:00 до 19:00</div>
+              <div class="contact-hours">Пн–Сб с 09:00 до 19:00 (Вс — выходной)</div>
             </div>
 
             <div class="contact-label">Удобства и стандарты сервиса</div>
@@ -1361,7 +1431,7 @@
               <li><span class="check-icon">✓</span> Знак «Хорошее место» по оценкам водителей</li>
               <li><span class="check-icon">✓</span> Оплата картой и наличными</li>
               <li><span class="check-icon">✓</span> Парковка и комната ожидания с Wi-Fi</li>
-              <li><span class="check-icon">✓</span> Ремонт иномарок, сварочные работы и глушители</li>
+              <li><span class="check-icon">✓</span> Ремонт иномарок, сварочные работы и аренда бокса</li>
             </ul>
           </div>
 
@@ -1378,7 +1448,7 @@
         <div class="map-container">
           <iframe 
             src="https://yandex.ru/map-widget/v1/?ol=biz&oid=123827273070" 
-            title="Карта проезда в Автосервис Звезда на Димитрова 91А"
+            title="Карта проезда в Автосервис «Звезда» (ул. Димитрова, 91А)"
             loading="lazy"
             allowfullscreen>
           </iframe>
@@ -1387,7 +1457,7 @@
     </div>
   </section>
 
-  <!-- ОРАНЖЕВЫЙ CTA-БАННЕР ВНИЗУ («МАШИНА НЕ ЖДЁТ») -->
+  <!-- CTA-БАННЕР ВНИЗУ -->
   <section class="cta-banner">
     <div class="container cta-banner-inner">
       <h2 class="cta-banner-title">РЕШИМ ВОПРОС<br>С АВТО СЕГОДНЯ</h2>
@@ -1395,12 +1465,8 @@
         Узнайте предварительную стоимость ремонта и запишитесь на удобное время без очередей.
       </p>
       <div class="cta-banner-buttons">
-        <a href="tel:+79092146434" class="btn-dark-pill">
-          📞 Позвонить мастеру: +7 (909) 214-64-34
-        </a>
-        <a href="#contacts" class="btn-white-outline">
-          📍 Посмотреть на карте
-        </a>
+        <a href="tel:+79092146434" class="btn-dark-pill">📞 Позвонить мастеру: +7 (909) 214-64-34</a>
+        <a href="#contacts" class="btn-white-outline">📍 Схема проезда</a>
       </div>
     </div>
   </section>
@@ -1412,7 +1478,7 @@
         <span class="sync-badge">✓ Данные актуальны: <span class="sync-date-text">ноябрь 2026 г.</span></span>
       </div>
       <p>
-        Демо-концепт мобильного сайта для автосервиса «Звезда» (г. Воронеж, ул. Серова, 22). Не является публичной офертой. Удалим или передадим права по первой просьбе владельца. Все данные сверены с открытыми карточками организации в 2ГИС и Яндекс Картах.
+        Демо-концепт мобильного сайта для Автосервис «Звезда» (г. Воронеж, ул. Димитрова, 91А). Не является публичной офертой. Удалим или передадим права по первой просьбе владельца. Все данные сверены с открытыми карточками организации в 2ГИС и Яндекс Картах.
       </p>
     </div>
   </footer>
@@ -1423,7 +1489,7 @@
       <a href="tel:+79092146434" class="mob-btn-call">
         📞 Позвонить
       </a>
-      <a href="https://yandex.ru/maps/?rtext=~51.664272,39.268825" target="_blank" rel="noopener" class="mob-btn-map">
+      <a href="https://yandex.ru/maps/?rtext=~51.669646,39.271244" target="_blank" rel="noopener" class="mob-btn-map">
         📍 Маршрут
       </a>
     </div>
@@ -1445,27 +1511,37 @@
         el.textContent = formattedDate;
       });
 
-      // 2. Живой статус работы (график 09:00 — 19:00 ежедневно)
+      // 2. Живой статус работы с учетом реального графика (Пн–Сб с 09:00 до 19:00 (Вс — выходной))
       const statusEl = document.getElementById('work-status');
       if (statusEl) {
+        const day = now.getDay(); // 0 — воскресенье
         const hour = now.getHours();
         const min = now.getMinutes();
         const currentMin = hour * 60 + min;
 
-        const openMin = 9 * 60;        // 09:00
-        const closeMin = 19 * 60;      // 19:00
-        const warnMin = closeMin - 30; // 18:30 (за 30 минут до закрытия)
+        const openHour = 9;
+        const closeHour = 19;
+        const closedSunday = true;
 
-        if (currentMin >= openMin && currentMin < warnMin) {
+        const openMin = openHour * 60;
+        const closeMin = closeHour * 60;
+        const warnMin = closeMin - 30;
+        const openTimeStr = (openHour < 10 ? '0' + openHour : openHour) + ':00';
+        const closeTimeStr = closeHour + ':00';
+
+        if (closedSunday && day === 0) {
+          statusEl.className = 'status-closed';
+          statusEl.innerHTML = '<span class="status-dot closed"></span> Сегодня выходной • откроется в Пн в ' + openTimeStr;
+        } else if (currentMin >= openMin && currentMin < warnMin) {
           statusEl.className = 'status-open';
-          statusEl.innerHTML = '<span class="status-dot"></span> Открыто сейчас • до 19:00';
+          statusEl.innerHTML = '<span class="status-dot"></span> Открыто сейчас • до ' + closeTimeStr;
         } else if (currentMin >= warnMin && currentMin < closeMin) {
           const leftMin = closeMin - currentMin;
           statusEl.className = 'status-closing-soon';
           statusEl.innerHTML = '<span class="status-dot closing-soon"></span> Скоро закроется • ещё ' + leftMin + ' мин';
         } else {
           statusEl.className = 'status-closed';
-          statusEl.innerHTML = '<span class="status-dot closed"></span> Сейчас закрыто • откроется в 09:00';
+          statusEl.innerHTML = '<span class="status-dot closed"></span> Сейчас закрыто • откроется в ' + openTimeStr;
         }
       }
     })();

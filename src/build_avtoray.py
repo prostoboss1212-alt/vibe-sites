@@ -3,7 +3,7 @@ import json
 import os
 import re
 
-base_dir = r"C:\Users\Ильясис Бутенкасис\Desktop\vibe-sites"
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 template_path = os.path.join(base_dir, "dist", "uspeh-777", "index.html")
 data_path = os.path.join(base_dir, "data", "businesses.json")
 out_file = os.path.join(base_dir, "dist", "avtoray", "index.html")

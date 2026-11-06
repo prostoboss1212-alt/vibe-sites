@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Автосервис «Автолюкс» — Воронеж, г. Воронеж, ул. Антонова-Овсеенко, 35Б | Ремонт и замена автостекол на Антонова-Овсеенко</title>
-  <meta name="description" content="Автосервис «Автолюкс» в Воронеже (г. Воронеж, ул. Антонова-Овсеенко, 35Б). Рейтинг 4.8 в 2ГИС и 4.3 на Яндекс Картах (21 отзыв). Профессиональная замена автостекол, ремонт трещин и полировка в Коминтерновском районе.">
+  <title>Автосервис «Автолюкс» — г. Воронеж, ул. Антонова-Овсеенко, 35Б | Центр автостёкол в Воронеже</title>
+  <meta name="description" content="Автосервис «Автолюкс» в Воронеже (г. Воронеж, ул. Антонова-Овсеенко, 35Б, Коминтерновский район). Рейтинг 4,8 в 2ГИС (15 отзывов) и 4,3 на Яндекс Картах (21 отзыв). Профессиональная замена автостёкол, ремонт сколов, полировка и кондиционеры на Антонова-Овсеенко.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
@@ -66,7 +66,7 @@
       position: sticky;
       top: 0;
       z-index: 90;
-      background: rgba(12, 13, 16, 0.88);
+      background: rgba(12, 13, 16, 0.90);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
@@ -138,28 +138,19 @@
       }
     }
 
-    /* Hero-секция */
+    /* Hero-секция с атмосферным фото ремзоны (без номеров и личных данных) */
     .hero {
       position: relative;
-      padding: 60px 0 48px;
-      background: 
-        radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.22) 0%, rgba(79, 70, 229, 0.05) 40%, transparent 70%),
-        linear-gradient(180deg, #0e1022 0%, var(--bg-main) 100%);
+      padding: 64px 0 52px;
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.25) 0%, transparent 65%),
+        linear-gradient(90deg, rgba(12, 13, 16, 0.96) 0%, rgba(12, 13, 16, 0.88) 55%, rgba(12, 13, 16, 0.72) 100%),
+        linear-gradient(180deg, rgba(12, 13, 16, 0.3) 0%, var(--bg-main) 100%),
+        url('https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
       border-bottom: 1px solid var(--border);
       overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 36px 36px;
-      pointer-events: none;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
     }
 
     .hero-content {
@@ -194,15 +185,17 @@
     }
 
     .pill-secondary {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.1);
       border: 1px solid var(--border-strong);
       color: var(--text-main);
+      backdrop-filter: blur(6px);
     }
 
     .pill-award {
-      background: rgba(245, 158, 11, 0.14);
-      border: 1px solid rgba(245, 158, 11, 0.35);
+      background: rgba(245, 158, 11, 0.16);
+      border: 1px solid rgba(245, 158, 11, 0.4);
       color: #fbbf24;
+      backdrop-filter: blur(6px);
     }
 
     .hero-title {
@@ -218,7 +211,7 @@
 
     .hero-sub {
       font-size: clamp(16px, 2vw, 18px);
-      color: #d1d5db;
+      color: #e5e7eb;
       max-width: 660px;
       margin-bottom: 28px;
       font-weight: 400;
@@ -255,19 +248,19 @@
     }
 
     .btn-primary:hover {
-      background: #fb923c;
+      filter: brightness(1.08);
       transform: translateY(-2px);
     }
 
     .btn-outline {
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.08);
       color: var(--text-main);
       border-color: var(--border-strong);
       backdrop-filter: blur(8px);
     }
 
     .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.14);
       transform: translateY(-2px);
     }
 
@@ -284,7 +277,7 @@
 
     .hero-contact-meta {
       padding-top: 18px;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--border-strong);
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -324,7 +317,7 @@
 
     .hero-address-line {
       font-size: 14px;
-      color: var(--text-muted);
+      color: #d1d5db;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -419,34 +412,18 @@
       overflow: hidden;
       border: 1px solid var(--border-strong);
       background: #14161b;
-      min-height: 200px;
+      min-height: 210px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding: 22px;
     }
 
-    .showcase-bg-1 {
-      background: 
-        linear-gradient(180deg, rgba(12, 13, 16, 0.2) 0%, rgba(12, 13, 16, 0.92) 100%),
-        radial-gradient(circle at 75% 30%, rgba(234, 88, 12, 0.28), transparent 60%),
-        repeating-linear-gradient(135deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 12px),
-        #181920;
-    }
-
-    .showcase-bg-2 {
-      background: 
-        linear-gradient(180deg, rgba(12, 13, 16, 0.2) 0%, rgba(12, 13, 16, 0.92) 100%),
-        radial-gradient(circle at 25% 30%, rgba(56, 189, 248, 0.2), transparent 60%),
-        repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 2px, transparent 2px, transparent 12px),
-        #151821;
-    }
-
     .showcase-badge {
       position: absolute;
       top: 16px;
       left: 16px;
-      background: rgba(12, 13, 16, 0.78);
+      background: rgba(12, 13, 16, 0.84);
       backdrop-filter: blur(6px);
       border: 1px solid var(--border-strong);
       color: var(--text-main);
@@ -470,9 +447,66 @@
 
     .showcase-desc {
       font-size: 13px;
-      color: var(--text-muted);
+      color: #d1d5db;
       position: relative;
       z-index: 2;
+    }
+
+    /* Фотогалерея оснащения (без номеров авто и лиц) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 680px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-strong);
+      min-height: 210px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px;
+    }
+
+    .gallery-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(12, 13, 16, 0.84);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border-strong);
+      color: var(--accent-light);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .gallery-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .gallery-desc {
+      font-size: 13px;
+      color: #d1d5db;
     }
 
     /* Секции */
@@ -541,7 +575,7 @@
     }
 
     .service-card:hover {
-      border-color: rgba(79, 70, 229, 0.35);
+      border-color: rgba(79, 70, 229, 0.45);
       background: var(--bg-card-hover);
       transform: translateY(-2px);
     }
@@ -582,12 +616,6 @@
       align-items: center;
     }
 
-    .service-price-muted {
-      color: #d1d5db;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
     .services-note {
       margin-top: 20px;
       font-size: 13px;
@@ -600,7 +628,7 @@
       font-weight: 600;
     }
 
-    /* ЗА ЧТО ЦЕНЯТ КЛИЕНТЫ (01, 02, 03) */
+    /* ЗА ЧТО ЦЕНЯТ КЛИЕНТЫ */
     .values-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -642,7 +670,7 @@
       line-height: 1.5;
     }
 
-    /* ОТЗЫВЫ И РЕЙТИНГИ 2ГИС + ЯНДЕКС */
+    /* ОТЗЫВЫ И ЖИВОЙ ВИДЖЕТ ЯНДЕКС КАРТ */
     .reviews-layout {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -763,6 +791,40 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .live-reviews-details {
+      margin-top: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .live-reviews-summary {
+      padding: 16px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      user-select: none;
+    }
+
+    .live-reviews-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .live-reviews-summary:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .live-reviews-widget-wrap {
+      padding: 0 20px 20px;
+      border-top: 1px solid var(--border);
     }
 
     .reviews-footnote {
@@ -912,7 +974,7 @@
       display: block;
     }
 
-    /* Оранжевый CTA-баннер */
+    /* CTA-баннер */
     .cta-banner {
       background: linear-gradient(135deg, #4338ca 0%, #312e81 100%);
       padding: 56px 0;
@@ -1068,7 +1130,7 @@
       <div class="nav-links">
         <a href="#services">Услуги и прайс</a>
         <a href="#why">О сервисе</a>
-        <a href="#reviews">Отзывы (720+)</a>
+        <a href="#reviews">Отзывы (36)</a>
         <a href="#contacts">Контакты</a>
         <a href="tel:+74732563946" class="nav-cta">+7 (473) 256-39-46</a>
       </div>
@@ -1080,15 +1142,15 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-pills">
-          <span class="pill pill-primary">Автотехцентр</span>
-          <span class="pill pill-secondary">Левобережный район</span>
-          <span class="pill pill-award">★ Номинант премии 2ГИС 2026</span>
+          <span class="pill pill-primary">Центр автостёкол</span>
+          <span class="pill pill-secondary">Коминтерновский район</span>
+          <span class="pill pill-award">★ Рейтинг 4.8 в 2ГИС</span>
         </div>
 
-        <h1 class="hero-title">АВТОСЕРВИС<br>«АВТОЛЮКС»</h1>
+        <h1 class="hero-title">ЦЕНТР АВТОСТЕКЛА<br>«АВТОЛЮКС»</h1>
 
         <p class="hero-sub">
-          Специализированный центр автостекол на Антонова-Овсеенко: вклейка от 1.5 часов, ремонт сколов и трещин полимером, бессрочная гарантия на герметичность шва.
+          Специализированный центр автостекол на ул. Антонова-Овсеенко, 35Б: вклейка от 1.5 часов, ремонт сколов и трещин фотополимером, полировка кузова и заправка автокондиционеров.
         </p>
 
         <div class="hero-actions">
@@ -1107,30 +1169,28 @@
             <a href="tel:+74732563946" class="hero-phone-big">+7 (473) 256-39-46</a>
           </div>
           <div class="hero-address-line">
-            <span>г. Воронеж, ул. Серова, 22 (ориентир — пер. Усманский, 170 м)</span>
+            <span>г. Воронеж, ул. Антонова-Овсеенко, 35Б (Коминтерновский район)</span>
             <span>•</span>
-            <span id="work-status" class="status-open"><span class="status-dot"></span> Открыто • 09:00 — 19:00</span>
+            <span id="work-status" class="status-open"><span class="status-dot"></span> Открыто • Пн–Сб 10:00 — 19:00</span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- БЛОК ВИТРИНЫ ЦЕХОВ -->
-  
-  <!-- СТАНДАРТЫ УСТАНОВКИ АВТОСТЕКЛА -->
+  <!-- БЛОК СПЕЦИАЛИЗАЦИИ -->
   <section class="showcase-section">
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;">
         <div style="background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; border-left: 4px solid var(--accent-light);">
           <div style="font-size: 11px; text-transform: uppercase; color: var(--accent-light); font-weight: 700; margin-bottom: 4px;">Скорость</div>
           <div style="color: #fff; font-weight: 700; font-size: 15px;">Вклейка от 1.5 часов</div>
-          <div style="color: var(--text-muted); font-size: 13px; margin-top: 4px;">Быстросохнущий европейский полиуретановый герметик</div>
+          <div style="color: var(--text-muted); font-size: 13px; margin-top: 4px;">Надежный быстросохнущий полиуретановый клей-герметик</div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; border-left: 4px solid #10b981;">
           <div style="font-size: 11px; text-transform: uppercase; color: #34d399; font-weight: 700; margin-bottom: 4px;">Надежность</div>
           <div style="color: #fff; font-weight: 700; font-size: 15px;">Бессрочная гарантия</div>
-          <div style="color: var(--text-muted); font-size: 13px; margin-top: 4px;">Гарантируем герметичность шва от протечек навсегда</div>
+          <div style="color: var(--text-muted); font-size: 13px; margin-top: 4px;">Гарантируем герметичность клеевого шва от протечек</div>
         </div>
         <div style="background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 18px; border-left: 4px solid #a855f7;">
           <div style="font-size: 11px; text-transform: uppercase; color: #c084fc; font-weight: 700; margin-bottom: 4px;">Ремонт сколов</div>
@@ -1141,8 +1201,7 @@
     </div>
   </section>
 
-
-  <!-- УСЛУГИ И ЦЕНЫ (ПРОВЕРЕНО ПО 2ГИС И ОФИЦИАЛЬНОМУ ПРАЙСУ СЕРВИСА) -->
+  <!-- УСЛУГИ И ЦЕНЫ -->
   <section id="services" class="section">
     <div class="container">
       <div class="section-eyebrow">Услуги и цены</div>
@@ -1153,7 +1212,7 @@
           <div>
             <div class="service-tag">Автостекла</div>
             <div class="service-name">Замена и вклейка лобового стекла</div>
-            <div class="service-desc">Демонтаж поврежденного стекла, подготовка рамки, нанесение праймера и профессиональная вклейка сертифицированным герметом</div>
+            <div class="service-desc">Демонтаж поврежденного стекла, подготовка рамки, нанесение праймера и профессиональная вклейка сертифицированным герметиком</div>
           </div>
           <div class="service-price">
             <span style="color: #818cf8;">от 2 500 ₽</span>
@@ -1181,19 +1240,9 @@
         </div>
         <div class="service-card" style="border-left: 3px solid #4f46e5;">
           <div>
-            <div class="service-tag">Кузовной участок</div>
-            <div class="service-name">Локальный кузовной ремонт</div>
-            <div class="service-desc">Устранение вмятин, рихтовка, восстановление зазоров кузовных элементов и антикоррозийная обработка</div>
-          </div>
-          <div class="service-price">
-            <span style="color: #818cf8;">от 2 000 ₽</span>
-          </div>
-        </div>
-        <div class="service-card" style="border-left: 3px solid #4f46e5;">
-          <div>
-            <div class="service-tag">Кузовной участок</div>
+            <div class="service-tag">Кузов и оптика</div>
             <div class="service-name">Полировка кузова и фар</div>
-            <div class="service-desc">Глубокая восстановительная полировка фар для восстановления прозрачности и защитное покрытие</div>
+            <div class="service-desc">Восстановительная полировка кузова и глубокая полировка фар для возвращения заводской прозрачности</div>
           </div>
           <div class="service-price">
             <span style="color: #818cf8;">от 1 000 ₽</span>
@@ -1201,55 +1250,72 @@
         </div>
         <div class="service-card" style="border-left: 3px solid #4f46e5;">
           <div>
-            <div class="service-tag">Электрика и допы</div>
-            <div class="service-name">Подключение датчиков дождя и обогрева</div>
-            <div class="service-desc">Калибровка датчиков света и дождя при замене стекла, подключение щеток с подогревом</div>
+            <div class="service-tag">Кузовной участок</div>
+            <div class="service-name">Локальный кузовной ремонт</div>
+            <div class="service-desc">Устранение вмятин, рихтовка, восстановление геометрии рамки лобового стекла и защита от коррозии</div>
           </div>
           <div class="service-price">
-            <span style="color: #818cf8;">от 800 ₽</span>
+            <span style="color: #818cf8;">от 2 000 ₽</span>
+          </div>
+        </div>
+        <div class="service-card" style="border-left: 3px solid #4f46e5;">
+          <div>
+            <div class="service-tag">Климат-контроль</div>
+            <div class="service-name">Заправка автокондиционеров</div>
+            <div class="service-desc">Диагностика герметичности системы кондиционирования, вакуумирование и заправка хладагентом</div>
+          </div>
+          <div class="service-price">
+            <span style="color: #818cf8;">от 1 500 ₽</span>
           </div>
         </div>
       </div>
 
-      <p class="services-note">Точная стоимость стекла и установки зависит от марки и комплектации авто. Звоните: <a href="tel:+74732563946">+7 (473) 256-39-46</a>.</p>
+      <p class="services-note">
+        Точная стоимость работ и запчастей согласуется после осмотра автомобиля. Запись и консультация по телефону: <a href="tel:+74732563946">+7 (473) 256-39-46</a>.
+      </p>
     </div>
   </section>
 
-  <!-- ЗА ЧТО ЦЕНЯТ КЛИЕНТЫ (01, 02, 03) -->
+  <!-- ЗА ЧТО ЦЕНЯТ КЛИЕНТЫ + ИЛЛЮСТРАЦИИ ОСНАЩЕНИЯ -->
   <section id="why" class="section">
     <div class="container">
       <div class="section-eyebrow">Факты о сервисе</div>
       <h2 class="section-heading">За что клиенты выбирают «Автолюкс»</h2>
 
-            <div class="values-grid">
+      <div class="values-grid">
         <div class="value-card">
           <div class="value-num">01</div>
           <div class="value-title">Профильный опыт по автостёклам</div>
-          <div class="value-text">
-            Специализированное оборудование для аккуратного демонтажа без повреждения рамки кузова и профессиональная вклейка лобовых и боковых стекол.
-          </div>
+          <div class="value-text">Специализированное оборудование для аккуратного демонтажа без повреждения рамки кузова и профессиональная вклейка лобовых и боковых стекол.</div>
         </div>
-
         <div class="value-card">
           <div class="value-num">02</div>
-          <div class="value-title">Бессрочная гарантия на клей</div>
-          <div class="value-text">
-            Используем только проверенные праймеры и герметики. Предоставляем бессрочную гарантию на герметичность клеевого соединения.
-          </div>
+          <div class="value-title">Бессрочная гарантия на шов</div>
+          <div class="value-text">Используем проверенные праймеры и полиуретановые герметики. Предоставляем бессрочную гарантию на герметичность клеевого шва.</div>
         </div>
-
         <div class="value-card">
           <div class="value-num">03</div>
-          <div class="value-title">Человеческое отношение</div>
-          <div class="value-text">
-            По отзывам клиентов, мастера честно консультируют: если ремонт нецелесообразен — скажут прямо и помогут сэкономить деньги.
-          </div>
+          <div class="value-title">Честное человеческое отношение</div>
+          <div class="value-text">По отзывам клиентов, мастера работают на совесть: качественно полируют кузов, заправляют кондиционеры и честно консультируют без лишних трат.</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card" style="background-image: linear-gradient(180deg, rgba(12, 13, 16, 0.15) 0%, rgba(12, 13, 16, 0.92) 100%), url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80');">
+          <span class="gallery-tag">Автостёкла и ремонт сколов</span>
+          <div class="gallery-title">Профессиональная вклейка и фотополимер</div>
+          <div class="gallery-desc">Аккуратный демонтаж без повреждения рамки кузова, установка лобовых стекол и остановка трещин</div>
+        </div>
+        <div class="gallery-card" style="background-image: linear-gradient(180deg, rgba(12, 13, 16, 0.15) 0%, rgba(12, 13, 16, 0.92) 100%), url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=800&q=80');">
+          <span class="gallery-tag">Детейлинг и климат</span>
+          <div class="gallery-title">Полировка кузова, фар и заправка кондиционеров</div>
+          <div class="gallery-desc">Восстановительная полировка кузова и оптики, проверка и заправка автомобильных кондиционеров</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ОТЗЫВЫ КЛИЕНТОВ (РЕАЛЬНАЯ СТАТИСТИКА 2ГИС И ЯНДЕКС КАРТ) -->
+  <!-- ОТЗЫВЫ КЛИЕНТОВ + ЖИВАЯ ЛЕНТА ЯНДЕКС КАРТ -->
   <section id="reviews" class="section">
     <div class="container">
       <div class="section-eyebrow">Репутация на картах</div>
@@ -1257,13 +1323,13 @@
 
       <div class="reviews-layout">
         <!-- Левая колонка: реальные рейтинги 2ГИС и Яндекс Карт -->
-                <div class="ratings-sidebar">
+        <div class="ratings-sidebar">
           <div class="rating-summary-card">
             <div class="rating-platform-badge">Рейтинг в 2ГИС</div>
             <div class="rating-big-number">4,8</div>
             <div class="rating-stars">★★★★★</div>
             <a href="https://2gis.ru/voronezh/search/Воронеж, улица Антонова-Овсеенко, 35Б" target="_blank" rel="noopener" class="rating-count-link">
-              15 проверенных отзывов →
+              15 отзывов в 2ГИС →
             </a>
             <div class="rating-award-pill">
               ⭐ Оценка клиентов 4.8 в 2ГИС
@@ -1275,7 +1341,7 @@
             <div class="rating-big-number">4,3</div>
             <div class="rating-stars">★★★★☆</div>
             <a href="https://yandex.ru/maps/org/avtolyuks/161339787019/reviews/" target="_blank" rel="noopener" class="rating-count-link">
-              21 отзыв на картах →
+              21 отзыв →
             </a>
           </div>
 
@@ -1288,10 +1354,8 @@
         <div class="reviews-cards-grid">
           <div class="review-quote-card">
             <div>
-              <div class="quote-mark" style="color: #818cf8;">“</div>
-              <p class="review-body">
-                Два раза обращался для ремонта лобового стекла на двух разных автомобилях. Сделали оба раза качественно. Профессиональный подход к замене автостекол и полировке. Рекомендую!
-              </p>
+              <div class="quote-mark" style="color: #38bdf8;">“</div>
+              <p class="review-body">Два раза обращался для ремонта лобового стекла на двух разных автомобилях. Сделали оба раза качественно. Профессиональный подход к замене автостекол и полировке. Рекомендую!</p>
             </div>
             <div class="review-meta">
               <span>Реальный отзыв из Яндекс Карт</span>
@@ -1300,10 +1364,8 @@
           </div>
           <div class="review-quote-card">
             <div>
-              <div class="quote-mark" style="color: #818cf8;">“</div>
-              <p class="review-body">
-                Качество работ на высоте. Профессиональный ремонт автостекла, полировка кузова, заправка кондиционеров. Не разочаровывали ни разу, делают на совесть.
-              </p>
+              <div class="quote-mark" style="color: #38bdf8;">“</div>
+              <p class="review-body">Качество работ на высоте. Профессиональный ремонт автостекла, полировка кузова, заправка кондиционеров. Не разочаровывали ни разу, делают на совесть.</p>
             </div>
             <div class="review-meta">
               <span>Реальный отзыв из Яндекс Карт</span>
@@ -1312,10 +1374,8 @@
           </div>
           <div class="review-quote-card">
             <div>
-              <div class="quote-mark" style="color: #818cf8;">“</div>
-              <p class="review-body">
-                Позвонил в данный сервис, с проблемой, что авто не заводится. Мастер по-честному сообщил, что по этой поломке они не профилируются, и подсказал куда обратиться, чтобы сэкономить на покупке запчасти. 5 баллов за честность!
-              </p>
+              <div class="quote-mark" style="color: #38bdf8;">“</div>
+              <p class="review-body">Позвонил в данный сервис, с проблемой, что авто не заводится. Мастер по-честному сообщил, что по этой поломке они не профилируются, и подсказал куда обратиться, чтобы сэкономить на покупке запчасти. 5 баллов за честность!</p>
             </div>
             <div class="review-meta">
               <span>Реальный отзыв из Яндекс Карт</span>
@@ -1325,8 +1385,21 @@
         </div>
       </div>
 
-            <p class="reviews-footnote">
-        Все оригиналы отзывов доступны в официальных карточках: <a href="https://yandex.ru/maps/org/avtolyuks/161339787019/reviews/" target="_blank" rel="noopener">Яндекс Карты (Рейтинг 4.3 • 21 отзыв)</a> и <a href="https://2gis.ru/voronezh/search/Воронеж, улица Антонова-Овсеенко, 35Б" target="_blank" rel="noopener">2ГИС (Рейтинг 4.8 • 15 отзывов)</a>.
+      <!-- Автообновляемый официальный виджет отзывов Яндекс Карт -->
+      <details class="live-reviews-details">
+        <summary class="live-reviews-summary">
+          <span>🔄 Открыть живую ленту отзывов Яндекс Карт (обновляется автоматически)</span>
+          <span style="color: var(--accent-light); font-size: 13px;">Показать ▼</span>
+        </summary>
+        <div class="live-reviews-widget-wrap">
+          <div style="max-width: 760px; height: 520px; overflow: hidden; position: relative; margin: 16px auto 0; border-radius: 10px; border: 1px solid var(--border-strong);">
+            <iframe style="width: 100%; height: 100%; border: none; border-radius: 10px; box-sizing: border-box;" src="https://yandex.ru/maps-reviews-widget/161339787019?comments" loading="lazy" title="Живые отзывы Яндекс Карт — Автосервис «Автолюкс»"></iframe>
+          </div>
+        </div>
+      </details>
+
+      <p class="reviews-footnote">
+        Все оригиналы отзывов доступны в официальных карточках: <a href="https://yandex.ru/maps/org/avtolyuks/161339787019/reviews/" target="_blank" rel="noopener">Яндекс Карты (4,3 • 21 отзыв)</a> и <a href="https://2gis.ru/voronezh/search/Воронеж, улица Антонова-Овсеенко, 35Б" target="_blank" rel="noopener">2ГИС (4,8 • 15 отзывов)</a>.
       </p>
     </div>
   </section>
@@ -1338,10 +1411,10 @@
       <h2 class="section-heading">Координаты и телефоны</h2>
 
       <div class="location-layout">
-                <div class="location-info">
+        <div class="location-info">
           <div>
             <div class="location-address-title">ул. Антонова-Овсеенко, 35Б</div>
-            <div class="location-district">г. Воронеж, Коминтерновский район</div>
+            <div class="location-district">г. Воронеж, Коминтерновский район • Координаты: 51.717235, 39.149491</div>
 
             <div class="contact-block">
               <div class="contact-label">Телефон сервиса</div>
@@ -1350,13 +1423,13 @@
 
             <div class="contact-block">
               <div class="contact-label">График работы</div>
-              <div class="contact-hours">Пн-Сб с 10:00 до 19:00</div>
+              <div class="contact-hours">Пн–Сб с 10:00 до 19:00 (Вс — выходной)</div>
             </div>
 
             <div class="contact-label">Удобства и стандарты сервиса</div>
             <ul class="features-list-contacts">
-              <li><span class="check-icon">✓</span> Автостекла в наличии для любых иномарок и авто РФ</li>
-              <li><span class="check-icon">✓</span> Вклейка лобового стекла от 1.5 часов</li>
+              <li><span class="check-icon">✓</span> Автостекла в наличии для иномарок и отечественных авто</li>
+              <li><span class="check-icon">✓</span> Вклейка стекла от 1.5 часов и ремонт сколов фотополимером</li>
               <li><span class="check-icon">✓</span> Бессрочная гарантия на герметичность клеевого шва</li>
               <li><span class="check-icon">✓</span> Парковка и Wi-Fi в зоне ожидания</li>
             </ul>
@@ -1375,7 +1448,7 @@
         <div class="map-container">
           <iframe 
             src="https://yandex.ru/map-widget/v1/?ol=biz&oid=161339787019" 
-            title="Карта проезда в Автосервис Автолюкс на Антонова-Овсеенко 35Б"
+            title="Карта проезда в Автосервис «Автолюкс» (ул. Антонова-Овсеенко, 35Б)"
             loading="lazy"
             allowfullscreen>
           </iframe>
@@ -1384,20 +1457,16 @@
     </div>
   </section>
 
-  <!-- ОРАНЖЕВЫЙ CTA-БАННЕР ВНИЗУ («МАШИНА НЕ ЖДЁТ») -->
+  <!-- CTA-БАННЕР ВНИЗУ -->
   <section class="cta-banner">
     <div class="container cta-banner-inner">
       <h2 class="cta-banner-title">ИДЕАЛЬНЫЙ ОБЗОР<br>И ЗАЩИТА АВТО</h2>
       <p class="cta-banner-sub">
-        Подберем лобовое или боковое стекло на ваш автомобиль и запишем на установку в удобное время.
+        Подберем лобовое или боковое стекло на ваш автомобиль и запишем на установку или ремонт скола в удобное время.
       </p>
       <div class="cta-banner-buttons">
-        <a href="tel:+74732563946" class="btn-dark-pill">
-          📞 Позвонить мастеру: +7 (473) 256-39-46
-        </a>
-        <a href="#contacts" class="btn-white-outline">
-          📍 Схема проезда
-        </a>
+        <a href="tel:+74732563946" class="btn-dark-pill">📞 Позвонить мастеру: +7 (473) 256-39-46</a>
+        <a href="#contacts" class="btn-white-outline">📍 Схема проезда</a>
       </div>
     </div>
   </section>
@@ -1409,7 +1478,7 @@
         <span class="sync-badge">✓ Данные актуальны: <span class="sync-date-text">ноябрь 2026 г.</span></span>
       </div>
       <p>
-        Демо-концепт мобильного сайта для автосервиса «Автолюкс» (г. Воронеж, ул. Серова, 22). Не является публичной офертой. Удалим или передадим права по первой просьбе владельца. Все данные сверены с открытыми карточками организации в 2ГИС и Яндекс Картах.
+        Демо-концепт мобильного сайта для Автосервис «Автолюкс» (г. Воронеж, ул. Антонова-Овсеенко, 35Б). Не является публичной офертой. Удалим или передадим права по первой просьбе владельца. Все данные сверены с открытыми карточками организации в 2ГИС и Яндекс Картах.
       </p>
     </div>
   </footer>
@@ -1420,7 +1489,7 @@
       <a href="tel:+74732563946" class="mob-btn-call">
         📞 Позвонить
       </a>
-      <a href="https://yandex.ru/maps/?rtext=~51.664272,39.268825" target="_blank" rel="noopener" class="mob-btn-map">
+      <a href="https://yandex.ru/maps/?rtext=~51.717235,39.149491" target="_blank" rel="noopener" class="mob-btn-map">
         📍 Маршрут
       </a>
     </div>
@@ -1442,27 +1511,37 @@
         el.textContent = formattedDate;
       });
 
-      // 2. Живой статус работы (график 09:00 — 19:00 ежедневно)
+      // 2. Живой статус работы с учетом реального графика (Пн–Сб с 10:00 до 19:00 (Вс — выходной))
       const statusEl = document.getElementById('work-status');
       if (statusEl) {
+        const day = now.getDay(); // 0 — воскресенье
         const hour = now.getHours();
         const min = now.getMinutes();
         const currentMin = hour * 60 + min;
 
-        const openMin = 9 * 60;        // 09:00
-        const closeMin = 19 * 60;      // 19:00
-        const warnMin = closeMin - 30; // 18:30 (за 30 минут до закрытия)
+        const openHour = 10;
+        const closeHour = 19;
+        const closedSunday = true;
 
-        if (currentMin >= openMin && currentMin < warnMin) {
+        const openMin = openHour * 60;
+        const closeMin = closeHour * 60;
+        const warnMin = closeMin - 30;
+        const openTimeStr = (openHour < 10 ? '0' + openHour : openHour) + ':00';
+        const closeTimeStr = closeHour + ':00';
+
+        if (closedSunday && day === 0) {
+          statusEl.className = 'status-closed';
+          statusEl.innerHTML = '<span class="status-dot closed"></span> Сегодня выходной • откроется в Пн в ' + openTimeStr;
+        } else if (currentMin >= openMin && currentMin < warnMin) {
           statusEl.className = 'status-open';
-          statusEl.innerHTML = '<span class="status-dot"></span> Открыто сейчас • до 19:00';
+          statusEl.innerHTML = '<span class="status-dot"></span> Открыто сейчас • до ' + closeTimeStr;
         } else if (currentMin >= warnMin && currentMin < closeMin) {
           const leftMin = closeMin - currentMin;
           statusEl.className = 'status-closing-soon';
           statusEl.innerHTML = '<span class="status-dot closing-soon"></span> Скоро закроется • ещё ' + leftMin + ' мин';
         } else {
           statusEl.className = 'status-closed';
-          statusEl.innerHTML = '<span class="status-dot closed"></span> Сейчас закрыто • откроется в 09:00';
+          statusEl.innerHTML = '<span class="status-dot closed"></span> Сейчас закрыто • откроется в ' + openTimeStr;
         }
       }
     })();
